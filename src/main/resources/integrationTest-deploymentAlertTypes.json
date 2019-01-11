@@ -1,0 +1,77 @@
+[
+  {
+    "deploymentAlertTypeId": "1",
+    "alertTypeId": "1",
+    "name": "Deployment Alert 1 with no presets or logic overrides",
+    "description": "Description 1",
+    "parameterPresets": [
+    ],
+    "logicOverridePresets": [
+    ],
+    "clearedParameterPresets": [
+    ],
+    "clearedLogicOverridePresets": [
+    ]
+  },
+  {
+    "deploymentAlertTypeId": "2",
+    "alertTypeId": "1",
+    "name": "Deployment Alert 2 with lookBackSampleCount preset in this DepAlertType",
+    "description": "Description 2",
+    "parameterPresets": [
+      {
+        "parameterId":"lookBackSampleCount",
+        "presetIntegerValue":"20"}
+    ],
+    "logicOverridePresets": [
+    ],
+    "clearedParameterPresets": [
+    ],
+    "clearedLogicOverridePresets": [
+    ]
+  },
+  {
+    "deploymentAlertTypeId": "3",
+    "alertTypeId": "5",
+    "name": "Deployment Alert 3 with lookBackSampleCount preset in BaseAlertType cleared in here",
+    "description": "Description 3",
+    "parameterPresets": [
+    ],
+    "logicOverridePresets": [
+    ],
+    "clearedParameterPresets": [
+      "lookBackSampleCount"
+    ],
+    "clearedLogicOverridePresets": [
+    ]
+  },
+  {
+    "deploymentAlertTypeId": "4",
+    "alertTypeId": "2",
+    "name": "Deployment Alert 4 with DisableNetPositionCheck preset in BaseAlertType",
+    "description": "Description 4",
+    "parameterPresets": [
+    ],
+    "logicOverridePresets": [
+    ],
+    "clearedParameterPresets": [
+    ],
+    "clearedLogicOverridePresets": [
+    ]
+  },
+  {
+    "deploymentAlertTypeId": "5",
+    "alertTypeId": "2",
+    "name": "Deployment Alert 5 with DisableNetPositionCheck preset in BaseAlertType cleared in here",
+    "description": "Description 5",
+    "parameterPresets": [
+    ],
+    "logicOverridePresets": [
+    ],
+    "clearedParameterPresets": [
+    ],
+    "clearedLogicOverridePresets": [
+      "DisableNetPositionCheck"
+    ]
+  }
+]

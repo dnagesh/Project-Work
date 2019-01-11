@@ -1,0 +1,16 @@
+[
+  {
+    "deploymentAlertTypeId": "1",
+    "alertTypeId": "1",
+    "name": "Deployment Alert 1",
+    "description": "Description 1",
+    "parameterPresets": [
+    ],
+    "logicOverridePresets": [
+    ],
+    "clearedParameterPresets": [
+    ],
+    "clearedLogicOverridePresets": [
+    ]
+  }
+]

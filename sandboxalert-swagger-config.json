@@ -1,0 +1,12 @@
+{
+  "library": "spring-mvc",
+  "dateLibrary": "java8",
+  "hideGenerationTimestamp": true,
+  "modelPackage": "com.irisium.service.sandboxalert.model",
+  "apiPackage": "com.irisium.service.sandboxalert.api",
+  "invokerPackage": "com.irisium.service.sandboxalert",
+  "delegatePattern": true,
+  "typeMappings": {
+    "OffsetDateTime": "java.time.Instant"
+  }
+}

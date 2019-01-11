@@ -1,0 +1,68 @@
+apply plugin: 'java'
+apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
+apply plugin: "org.hidetake.swagger.generator"
+
+apply from: "${rootProject.projectDir}/gradle-common/dependencyCheck.gradle"
+apply from: "${rootProject.projectDir}/gradle-common/sonarJava.gradle"
+apply from: "${rootProject.projectDir}/gradle-common/serviceDocker.gradle"
+
+tasks.docker.dependsOn(":service-common:docker")
+
+dependencies {
+    compile project(":entity-relationship-service")
+    compile project(":gui-notification-common")
+    compile project(":service-common")
+    compile project(":service-common-configuration")
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.springframework.boot:spring-boot-starter-security"
+    compile "org.springframework.boot:spring-boot-starter-data-cassandra"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8"
+    compile "org.hibernate.validator:hibernate-validator"
+    compile "io.swagger:swagger-annotations:$swaggerAnnotationsVersion"
+
+    testCompile project(":test-utils")
+
+    swaggerCodegen "io.swagger:swagger-codegen-cli:$swaggerCodegenCliVersion"
+}
+
+swaggerSources {
+    alertConfigurationApi {
+        inputFile = file(project(":api-definition").projectDir.path + "/src/main/yaml/alertConfigurationApi.yaml")
+        code {
+            language = 'spring'
+            configFile = file('alertconfiguration-swagger-config.json')
+            components = ['models', 'apis']
+        }
+    }
+    alertDefinitionApi {
+        inputFile = file(project(":api-definition").projectDir.path + "/src/main/yaml/alertDefinitionApi.yaml")
+        code {
+            language = 'spring'
+            configFile = file('alertDefinition-swagger-config.json')
+            components = ['models', 'apis']
+        }
+    }
+    liveAlertApi {
+        inputFile = file(project(":api-definition").projectDir.path + "/src/main/yaml/liveAlertApi.yaml")
+        code {
+            language = 'spring'
+            configFile = file('livealert-swagger-config.json')
+            components = ['models', 'apis']
+        }
+    }
+    sandboxAlertApi {
+        inputFile = file(project(":api-definition").projectDir.path + "/src/main/yaml/sandboxAlertApi.yaml")
+        code {
+            language = 'spring'
+            configFile = file('sandboxalert-swagger-config.json')
+            components = ['models', 'apis']
+        }
+    }
+}
+compileJava.dependsOn swaggerSources.alertConfigurationApi.code
+compileJava.dependsOn swaggerSources.alertDefinitionApi.code
+compileJava.dependsOn swaggerSources.liveAlertApi.code
+compileJava.dependsOn swaggerSources.sandboxAlertApi.code
+sourceSets.main.java.srcDirs("${swaggerSources.alertConfigurationApi.code.outputDir}/src/main/java","${swaggerSources.alertDefinitionApi.code.outputDir}/src/main/java","${swaggerSources.liveAlertApi.code.outputDir}/src/main/java", "${swaggerSources.sandboxAlertApi.code.outputDir}/src/main/java")

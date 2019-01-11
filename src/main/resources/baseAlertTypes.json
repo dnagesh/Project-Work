@@ -1,0 +1,2666 @@
+[
+  {
+    "alertTypeId": "1",
+    "name": "Abusive Squeeze",
+    "description": null,
+    "implementingClass": "com.cinnober.irisium.pipeline.definition.AbusiveSqueezeDefinitionFactory",
+    "parameters": [
+      {
+        "parameterId": "timeWindow",
+        "name": "Evaluation Time Window",
+        "description": "The time window (resolution) over which alert logic is evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "1 second",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1S"
+          },
+          {
+            "displayValue": "5 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "5S"
+          },
+          {
+            "displayValue": "15 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "15S"
+          },
+          {
+            "displayValue": "30 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "30S"
+          },
+          {
+            "displayValue": "1 minute",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "60S"
+          },
+          {
+            "displayValue": "5 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "300S"
+          },
+          {
+            "displayValue": "15 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "900S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "1 hour",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "3600S"
+          },
+          {
+            "displayValue": "2 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "7200S"
+          },
+          {
+            "displayValue": "3 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "10800S"
+          },
+          {
+            "displayValue": "4 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "14400S"
+          },
+          {
+            "displayValue": "5 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "18000S"
+          },
+          {
+            "displayValue": "6 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "21600S"
+          },
+          {
+            "displayValue": "7 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "25200S"
+          },
+          {
+            "displayValue": "8 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "28800S"
+          },
+          {
+            "displayValue": "9 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "32400S"
+          },
+          {
+            "displayValue": "10 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "36000S"
+          },
+          {
+            "displayValue": "11 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "39600S"
+          },
+          {
+            "displayValue": "12 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "43200S"
+          },
+          {
+            "displayValue": "13 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "46800S"
+          },
+          {
+            "displayValue": "14 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "50400S"
+          },
+          {
+            "displayValue": "15 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "54000S"
+          },
+          {
+            "displayValue": "16 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "57600S"
+          },
+          {
+            "displayValue": "17 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "61200S"
+          },
+          {
+            "displayValue": "18 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "64800S"
+          },
+          {
+            "displayValue": "19 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "68400S"
+          },
+          {
+            "displayValue": "20 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "72000S"
+          },
+          {
+            "displayValue": "21 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "75600S"
+          },
+          {
+            "displayValue": "22 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "79200S"
+          },
+          {
+            "displayValue": "23 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "82800S"
+          },
+          {
+            "displayValue": "1 day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "86400S"
+          },
+          {
+            "displayValue": "1.5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "129600S"
+          },
+          {
+            "displayValue": "2 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "172800S"
+          },
+          {
+            "displayValue": "3 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "259200S"
+          },
+          {
+            "displayValue": "4 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "345600S"
+          },
+          {
+            "displayValue": "5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "432000S"
+          },
+          {
+            "displayValue": "6 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "518400S"
+          },
+          {
+            "displayValue": "7 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "604800S"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "evaluationInterval",
+        "name": "Evaluation Interval",
+        "description": "The interval at which the alert is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "lookBackWindow",
+        "name": "General Behaviour Time Window",
+        "description": "The time window that is used to establish general historical behaviour (e.g. a day, week)",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "Time Window",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "TIME_WINDOW"
+          },
+          {
+            "displayValue": "1 Day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "DAY"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "lookBackSampleCount",
+        "name": "Trend Sampling Count",
+        "description": "The number of data samples for calculating trends of the Evaluation and General Behaviour Time Windows. It is given a time dimension by the Trend Sampling Frequency",
+        "dataType": "INTEGER",
+        "dataTypeDescription": null,
+        "minPermittedValue": 1,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      },
+      {
+        "parameterId": "lookBackSampleStepSize",
+        "name": "Trend Sampling Frequency",
+        "description": "The sampling frequency that trend calculations use (e.g. every day, 2 days, week). This must be a multiple of days.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in days formatted as xD where x is the number of days",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "Thresh_MaxNetPosToAvailableQuantity",
+        "name": "Suspicious Position vs Available Quantity Threshold",
+        "description": "The level at which the ratio of max. position within the Evaluation Time Window to the available quantity of an instrument in its market becomes suspicious e.g. cornering the market",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_MaxNetPosToHistorical",
+        "name": "Suspicious Position vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of max. position within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspicious e.g. generally unusual behaviour",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_MaxNetPosToHistoricalTimeWindow",
+        "name": "Suspicious Position vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of max. position within the Evaluation Time Window to its Trend becomes suspicious e.g. unusual behaviour for that time of day",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_MidPriceStdDevToHistorical",
+        "name": "Suspicious Price Volatility vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of mid price volatility within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_MidPriceStdDevToHistoricalTimeWindow",
+        "name": "Suspicious Price Volatility vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of mid price volatility within the Evaluation Time Window to its Evaluation Time Window Trend becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_MidPriceDeltaToHistoricalMidPriceStdDev",
+        "name": "Suspicious Mid Price Move vs General Behaviour Threshold",
+        "description": "The level at which the ratio of mid price move within the Evaluation Time Window to its General Behaviour Time Window Trend for mid price volatility becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_MidPriceDeltaToHistoricalMidPriceStdDevTimeWindow",
+        "name": "Suspicious Mid Price Move vs Evaluation Window Threshold",
+        "description": "The level at which the ratio of mid price move within the Evaluation Time Window to its Evaluation Time Window Trend for mid price volatility becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      }
+    ],
+    "logicOverrides": [
+      {
+        "logicOverrideId": "DisablePositionToMktAvailableQtyCheck",
+        "name": "Disable Position vs Available Quantity Check",
+        "description": "Disable check for net position versus available quantity",
+        "irrelevantParameters": [
+          "Thresh_MaxNetPosToAvailableQuantity"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableHistoricalPositionCheck",
+        "name": "Disable Position vs Historical Trend Check",
+        "description": "Disable net position check versus historical trends in the Evaluation and General Behaviour Time Windows",
+        "irrelevantParameters": [
+          "Thresh_MaxNetPosToHistorical",
+          "Thresh_MaxNetPosToHistoricalTimeWindow"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableMarketMoveAndVolatilityCheck",
+        "name": "Disable Market Move and Volatility Check",
+        "description": "Disable checks for market move and volatility versus historical trends in the Evaluation and General Behaviour Time Windows",
+        "irrelevantParameters": [
+          "Thresh_MidPriceStdDevToHistorical",
+          "Thresh_MidPriceStdDevToHistoricalTimeWindow",
+          "Thresh_MidPriceDeltaToHistoricalMidPriceStdDev",
+          "Thresh_MidPriceDeltaToHistoricalMidPriceStdDevTimeWindow"
+        ]
+      }
+    ],
+    "aggregationBased": true,
+    "parameterPresets": null,
+    "logicOverridePresets": null
+  },
+  {
+    "alertTypeId": "2",
+    "name": "Wash Trades",
+    "description": null,
+    "implementingClass": "com.cinnober.irisium.pipeline.definition.WashTradesDefinitionFactory",
+    "parameters": [
+      {
+        "parameterId": "timeWindow",
+        "name": "Evaluation Time Window",
+        "description": "The time window (resolution) over which alert logic is evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "1 second",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1S"
+          },
+          {
+            "displayValue": "5 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "5S"
+          },
+          {
+            "displayValue": "15 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "15S"
+          },
+          {
+            "displayValue": "30 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "30S"
+          },
+          {
+            "displayValue": "1 minute",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "60S"
+          },
+          {
+            "displayValue": "5 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "300S"
+          },
+          {
+            "displayValue": "15 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "900S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "1 hour",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "3600S"
+          },
+          {
+            "displayValue": "2 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "7200S"
+          },
+          {
+            "displayValue": "3 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "10800S"
+          },
+          {
+            "displayValue": "4 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "14400S"
+          },
+          {
+            "displayValue": "5 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "18000S"
+          },
+          {
+            "displayValue": "6 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "21600S"
+          },
+          {
+            "displayValue": "7 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "25200S"
+          },
+          {
+            "displayValue": "8 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "28800S"
+          },
+          {
+            "displayValue": "9 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "32400S"
+          },
+          {
+            "displayValue": "10 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "36000S"
+          },
+          {
+            "displayValue": "11 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "39600S"
+          },
+          {
+            "displayValue": "12 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "43200S"
+          },
+          {
+            "displayValue": "13 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "46800S"
+          },
+          {
+            "displayValue": "14 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "50400S"
+          },
+          {
+            "displayValue": "15 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "54000S"
+          },
+          {
+            "displayValue": "16 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "57600S"
+          },
+          {
+            "displayValue": "17 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "61200S"
+          },
+          {
+            "displayValue": "18 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "64800S"
+          },
+          {
+            "displayValue": "19 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "68400S"
+          },
+          {
+            "displayValue": "20 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "72000S"
+          },
+          {
+            "displayValue": "21 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "75600S"
+          },
+          {
+            "displayValue": "22 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "79200S"
+          },
+          {
+            "displayValue": "23 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "82800S"
+          },
+          {
+            "displayValue": "1 day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "86400S"
+          },
+          {
+            "displayValue": "1.5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "129600S"
+          },
+          {
+            "displayValue": "2 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "172800S"
+          },
+          {
+            "displayValue": "3 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "259200S"
+          },
+          {
+            "displayValue": "4 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "345600S"
+          },
+          {
+            "displayValue": "5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "432000S"
+          },
+          {
+            "displayValue": "6 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "518400S"
+          },
+          {
+            "displayValue": "7 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "604800S"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "evaluationInterval",
+        "name": "Evaluation Interval",
+        "description": "The interval at which the alert is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "Thresh_LowAbsoluteDeltaNetPosition",
+        "name": "Small Net Position Move Threshold",
+        "description": "The level below which a move in net position within the Evaluation Time Window is considered minimal",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": 0,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      },
+      {
+        "parameterId": "Thresh_LowAbsoluteDeltaNetProceeds",
+        "name": "Small Net Proceeds Move Threshold",
+        "description": "The level below which a move in net proceeds within the Evaluation Time Window is considered minimal",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": 0,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      }
+    ],
+    "logicOverrides": [
+      {
+        "logicOverrideId": "DisableNetPositionCheck",
+        "name": "Disable Net Position Move Checks",
+        "description": "Disable checks for minimal net position move in the Evaluation Time Window",
+        "irrelevantParameters": [
+          "Thresh_LowAbsoluteDeltaNetPosition"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableNetProceedsCheck",
+        "name": "Disable Net Proceeds Move Checks",
+        "description": "Disable checks for minimal net proceeds move in the Evaluation Time Window",
+        "irrelevantParameters": [
+          "Thresh_LowAbsoluteDeltaNetProceeds"
+        ]
+      }
+    ],
+    "aggregationBased": true,
+    "parameterPresets": null,
+    "logicOverridePresets": null
+  },
+  {
+    "alertTypeId": "3",
+    "name": "Parking",
+    "description": null,
+    "implementingClass": "com.cinnober.irisium.pipeline.definition.WashTradesDefinitionFactory",
+    "parameters": [
+      {
+        "parameterId": "timeWindow",
+        "name": "Evaluation Time Window",
+        "description": "The time window (resolution) over which alert logic is evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "1 second",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1S"
+          },
+          {
+            "displayValue": "5 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "5S"
+          },
+          {
+            "displayValue": "15 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "15S"
+          },
+          {
+            "displayValue": "30 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "30S"
+          },
+          {
+            "displayValue": "1 minute",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "60S"
+          },
+          {
+            "displayValue": "5 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "300S"
+          },
+          {
+            "displayValue": "15 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "900S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "1 hour",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "3600S"
+          },
+          {
+            "displayValue": "2 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "7200S"
+          },
+          {
+            "displayValue": "3 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "10800S"
+          },
+          {
+            "displayValue": "4 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "14400S"
+          },
+          {
+            "displayValue": "5 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "18000S"
+          },
+          {
+            "displayValue": "6 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "21600S"
+          },
+          {
+            "displayValue": "7 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "25200S"
+          },
+          {
+            "displayValue": "8 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "28800S"
+          },
+          {
+            "displayValue": "9 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "32400S"
+          },
+          {
+            "displayValue": "10 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "36000S"
+          },
+          {
+            "displayValue": "11 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "39600S"
+          },
+          {
+            "displayValue": "12 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "43200S"
+          },
+          {
+            "displayValue": "13 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "46800S"
+          },
+          {
+            "displayValue": "14 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "50400S"
+          },
+          {
+            "displayValue": "15 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "54000S"
+          },
+          {
+            "displayValue": "16 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "57600S"
+          },
+          {
+            "displayValue": "17 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "61200S"
+          },
+          {
+            "displayValue": "18 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "64800S"
+          },
+          {
+            "displayValue": "19 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "68400S"
+          },
+          {
+            "displayValue": "20 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "72000S"
+          },
+          {
+            "displayValue": "21 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "75600S"
+          },
+          {
+            "displayValue": "22 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "79200S"
+          },
+          {
+            "displayValue": "23 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "82800S"
+          },
+          {
+            "displayValue": "1 day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "86400S"
+          },
+          {
+            "displayValue": "1.5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "129600S"
+          },
+          {
+            "displayValue": "2 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "172800S"
+          },
+          {
+            "displayValue": "3 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "259200S"
+          },
+          {
+            "displayValue": "4 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "345600S"
+          },
+          {
+            "displayValue": "5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "432000S"
+          },
+          {
+            "displayValue": "6 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "518400S"
+          },
+          {
+            "displayValue": "7 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "604800S"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "evaluationInterval",
+        "name": "Evaluation Interval",
+        "description": "The interval at which the alert is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "Thresh_LowAbsoluteDeltaNetPosition",
+        "name": "Small Net Position Move Threshold",
+        "description": "The level below which a move in net position within the Evaluation Time Window is considered minimal",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": 0,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      },
+      {
+        "parameterId": "Thresh_LowAbsoluteDeltaNetProceeds",
+        "name": "Small Net Proceeds Move Threshold",
+        "description": "The level below which a move in net proceeds within the Evaluation Time Window is considered minimal",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": 0,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      }
+    ],
+    "logicOverrides": [
+      {
+        "logicOverrideId": "DisableNetPositionCheck",
+        "name": "Disable Net Position Move Checks",
+        "description": "Disable checks for minimal net position move in the Evaluation Time Window",
+        "irrelevantParameters": [
+          "Thresh_LowAbsoluteDeltaNetPosition"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableNetProceedsCheck",
+        "name": "Disable Net Proceeds Move Checks",
+        "description": "Disable checks for minimal net proceeds move in the Evaluation Time Window",
+        "irrelevantParameters": [
+          "Thresh_LowAbsoluteDeltaNetProceeds"
+        ]
+      }
+    ],
+    "aggregationBased": true,
+    "parameterPresets": null,
+    "logicOverridePresets": null
+  },
+  {
+    "alertTypeId": "4",
+    "name": "Churning",
+    "description": null,
+    "implementingClass": "com.cinnober.irisium.pipeline.definition.ChurningDefinitionFactory",
+    "parameters": [
+      {
+        "parameterId": "timeWindow",
+        "name": "Evaluation Time Window",
+        "description": "The time window (resolution) over which alert logic is evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "1 second",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1S"
+          },
+          {
+            "displayValue": "5 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "5S"
+          },
+          {
+            "displayValue": "15 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "15S"
+          },
+          {
+            "displayValue": "30 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "30S"
+          },
+          {
+            "displayValue": "1 minute",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "60S"
+          },
+          {
+            "displayValue": "5 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "300S"
+          },
+          {
+            "displayValue": "15 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "900S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "1 hour",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "3600S"
+          },
+          {
+            "displayValue": "2 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "7200S"
+          },
+          {
+            "displayValue": "3 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "10800S"
+          },
+          {
+            "displayValue": "4 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "14400S"
+          },
+          {
+            "displayValue": "5 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "18000S"
+          },
+          {
+            "displayValue": "6 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "21600S"
+          },
+          {
+            "displayValue": "7 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "25200S"
+          },
+          {
+            "displayValue": "8 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "28800S"
+          },
+          {
+            "displayValue": "9 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "32400S"
+          },
+          {
+            "displayValue": "10 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "36000S"
+          },
+          {
+            "displayValue": "11 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "39600S"
+          },
+          {
+            "displayValue": "12 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "43200S"
+          },
+          {
+            "displayValue": "13 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "46800S"
+          },
+          {
+            "displayValue": "14 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "50400S"
+          },
+          {
+            "displayValue": "15 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "54000S"
+          },
+          {
+            "displayValue": "16 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "57600S"
+          },
+          {
+            "displayValue": "17 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "61200S"
+          },
+          {
+            "displayValue": "18 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "64800S"
+          },
+          {
+            "displayValue": "19 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "68400S"
+          },
+          {
+            "displayValue": "20 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "72000S"
+          },
+          {
+            "displayValue": "21 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "75600S"
+          },
+          {
+            "displayValue": "22 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "79200S"
+          },
+          {
+            "displayValue": "23 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "82800S"
+          },
+          {
+            "displayValue": "1 day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "86400S"
+          },
+          {
+            "displayValue": "1.5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "129600S"
+          },
+          {
+            "displayValue": "2 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "172800S"
+          },
+          {
+            "displayValue": "3 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "259200S"
+          },
+          {
+            "displayValue": "4 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "345600S"
+          },
+          {
+            "displayValue": "5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "432000S"
+          },
+          {
+            "displayValue": "6 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "518400S"
+          },
+          {
+            "displayValue": "7 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "604800S"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "evaluationInterval",
+        "name": "Evaluation Interval",
+        "description": "The interval at which the alert is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "Thresh_HighPercentageDeviationSumExecQtyFromDeltaNetPosition",
+        "name": "Suspicious Traded Volume vs Net Position Move Threshold",
+        "description": "The level at which the volume traded as a percentage of the net position move within the Evaluation Time Window becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "PERCENTAGE"
+      }
+    ],
+    "logicOverrides": null,
+    "aggregationBased": true,
+    "parameterPresets": null,
+    "logicOverridePresets": null
+  },
+  {
+    "alertTypeId": "5",
+    "name": "PumpAndDumpTrashAndCash",
+    "description": null,
+    "implementingClass": "com.cinnober.irisium.pipeline.definition.PumpAndDumpTrashAndCashDefinitionFactory",
+    "parameters": [
+      {
+        "parameterId": "timeWindow",
+        "name": "Evaluation Time Window",
+        "description": "The time window (resolution) over which alert logic is evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "1 second",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1S"
+          },
+          {
+            "displayValue": "5 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "5S"
+          },
+          {
+            "displayValue": "15 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "15S"
+          },
+          {
+            "displayValue": "30 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "30S"
+          },
+          {
+            "displayValue": "1 minute",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "60S"
+          },
+          {
+            "displayValue": "5 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "300S"
+          },
+          {
+            "displayValue": "15 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "900S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "1 hour",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "3600S"
+          },
+          {
+            "displayValue": "2 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "7200S"
+          },
+          {
+            "displayValue": "3 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "10800S"
+          },
+          {
+            "displayValue": "4 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "14400S"
+          },
+          {
+            "displayValue": "5 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "18000S"
+          },
+          {
+            "displayValue": "6 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "21600S"
+          },
+          {
+            "displayValue": "7 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "25200S"
+          },
+          {
+            "displayValue": "8 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "28800S"
+          },
+          {
+            "displayValue": "9 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "32400S"
+          },
+          {
+            "displayValue": "10 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "36000S"
+          },
+          {
+            "displayValue": "11 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "39600S"
+          },
+          {
+            "displayValue": "12 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "43200S"
+          },
+          {
+            "displayValue": "13 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "46800S"
+          },
+          {
+            "displayValue": "14 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "50400S"
+          },
+          {
+            "displayValue": "15 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "54000S"
+          },
+          {
+            "displayValue": "16 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "57600S"
+          },
+          {
+            "displayValue": "17 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "61200S"
+          },
+          {
+            "displayValue": "18 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "64800S"
+          },
+          {
+            "displayValue": "19 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "68400S"
+          },
+          {
+            "displayValue": "20 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "72000S"
+          },
+          {
+            "displayValue": "21 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "75600S"
+          },
+          {
+            "displayValue": "22 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "79200S"
+          },
+          {
+            "displayValue": "23 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "82800S"
+          },
+          {
+            "displayValue": "1 day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "86400S"
+          },
+          {
+            "displayValue": "1.5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "129600S"
+          },
+          {
+            "displayValue": "2 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "172800S"
+          },
+          {
+            "displayValue": "3 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "259200S"
+          },
+          {
+            "displayValue": "4 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "345600S"
+          },
+          {
+            "displayValue": "5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "432000S"
+          },
+          {
+            "displayValue": "6 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "518400S"
+          },
+          {
+            "displayValue": "7 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "604800S"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "evaluationInterval",
+        "name": "Evaluation Interval",
+        "description": "The interval at which the alert is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "lookBackWindow",
+        "name": "General Behaviour Time Window",
+        "description": "The time window that is used to establish general historical behaviour (e.g. a day, week)",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "Time Window",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "TIME_WINDOW"
+          },
+          {
+            "displayValue": "1 Day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "DAY"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "lookBackSampleCount",
+        "name": "Trend Sampling Count",
+        "description": "The number of data samples for calculating trends of the Evaluation and General Behaviour Time Windows. It is given a time dimension by the Trend Sampling Frequency",
+        "dataType": "INTEGER",
+        "dataTypeDescription": null,
+        "minPermittedValue": 1,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      },
+      {
+        "parameterId": "lookBackSampleStepSize",
+        "name": "Trend Sampling Frequency",
+        "description": "The sampling frequency that trend calculations use (e.g. every day, 2 days, week). This must be a multiple of days.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in days formatted as xD where x is the number of days",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "Thresh_HighAbsDeltaNetPosToHistorical",
+        "name": "Suspicious Position vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of net position move within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspicious e.g. generally unusual behaviour",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighAbsDeltaNetPosToHistoricalTimeWindow",
+        "name": "Suspicious Position vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of net position move within the Evaluation Time Window to its Trend becomes suspicious e.g. unusual behaviour for that time of day",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighAbsDeltaMidPriceToHistorical",
+        "name": "Suspicious Market Price Move vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of market mid price move within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighAbsDeltaMidPriceToHistoricalTimeWindow",
+        "name": "Suspicious Market Price Move vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of market mid price increase within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecCountToHistorical",
+        "name": "Suspicious Buy Execution Count vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the number of buy executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecCountToHistoricalTimeWindow",
+        "name": "Suspicious Buy Execution Count vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the number of buy executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecQtySumToHistorical",
+        "name": "Suspicious Buy Execution Volume vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the volume of buy executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecQtySumToHistoricalTimeWindow",
+        "name": "Suspicious Buy Execution Volume vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the volume of buy executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecCountToHistorical",
+        "name": "Suspicious Sell Execution Count vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the number of sell executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecCountToHistoricalTimeWindow",
+        "name": "Suspicious Sell Execution Count vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the number of sell executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecQtySumToHistorical",
+        "name": "Suspicious Sell  Execution Volume vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the volume of sell executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecQtySumToHistoricalTimeWindow",
+        "name": "Suspicious Sell  Execution Volume vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the volume of sell executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "FutureEval_NetPositionMoveTimeWindowStart",
+        "name": "Net Position Move Future Time Window Start",
+        "description": "The time, relative to the end of the Evaluation Time Window, that the future Net Position move should start being evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "FutureEval_NetPositionMoveTimeWindowEnd",
+        "name": "Net Position Move Future Time Window End",
+        "description": "The time, relative to the end of the Evaluation Time Window, that the future Net Position move should stop being evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "FutureEval_NetPositionMoveTimeWindow",
+        "name": "Net Position Move Future Evaluation Time Window",
+        "description": "The time window (resolution) over which Net Position move is evaluated within the bound of the Future Time Window. (e.g. must be shorter than the Future Time Window)",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "FutureEval_NetPositionMoveEvaluationInterval",
+        "name": "Net Position Move Future Evaluation Interval",
+        "description": "The interval at which the Net Position move check in the future is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "FutureEval_Thresh_PercentageMoveNetPosFromReference",
+        "name": "Future Net Position Move vs Evaluation Net Position Threshold (%)",
+        "description": "The level at which the ratio (as a %) of the Net Position move in the Future Evaluation Time Window to the Net Position at the end of the current Evaluation Time Window becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "PERCENTAGE"
+      },
+      {
+        "parameterId": "FutureEval_MidPriceMoveTimeWindowStart",
+        "name": "Mid Price Move Future Time Window Start",
+        "description": "The time, relative to the end of the Evaluation Time Window, that the future Market Mid Price Move should start being evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "FutureEval_MidPriceMoveTimeWindowEnd",
+        "name": "Mid Price Move Future Time Window End",
+        "description": "The time, relative to the end of the Evaluation Time Window, that the future Market Mid Price Move should stop being evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "FutureEval_MidPriceMoveTimeWindow",
+        "name": "Mid Price Move Future Evaluation Time Window",
+        "description": "The time window (resolution) over which Market Mid Price is evaluated within the bound of the Future Time Window. (e.g. must be shorter than the Future Time Window)",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "FutureEval_MidPriceMoveEvaluationInterval",
+        "name": "Mid Price Move Future Evaluation Interval",
+        "description": "The interval at which the Market Mid Price move check in the future is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "FutureEval_Thresh_PercentageMoveMidPriceFromReference",
+        "name": "Future Mid Price Move vs Evaluation Mid Price Threshold (%)",
+        "description": "The level at which the ratio (as a %) of the Market Mid Price move in the Future Evaluation Time Window to the Market Mid Price at the end of the current Evaluation Time Window becomes suspicious",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "PERCENTAGE"
+      }
+    ],
+    "logicOverrides": [
+      {
+        "logicOverrideId": "DisableNetPositionCheck",
+        "name": "Disable Net Position Move Checks",
+        "description": "Disable checks for significant net position move in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": [
+          "Thresh_HighAbsDeltaNetPosToHistorical",
+          "Thresh_HighAbsDeltaNetPosToHistoricalTimeWindow"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableMktMidPriceCheck",
+        "name": "Disable Market Price Move Checks",
+        "description": "Disable checks for significant market mid price move in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": [
+          "Thresh_HighAbsDeltaMidPriceToHistorical",
+          "Thresh_HighAbsDeltaMidPriceToHistoricalTimeWindow"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableBuyExecutionCheck",
+        "name": "Disable Buy Execution Checks",
+        "description": "Disable checks for significant buy execution activity in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": [
+          "Thresh_HighBuyExecCountToHistorical",
+          "Thresh_HighBuyExecCountToHistoricalTimeWindow",
+          "Thresh_HighBuyExecQtySumToHistorical",
+          "Thresh_HighBuyExecQtySumToHistoricalTimeWindow"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableSellExecutionCheck",
+        "name": "Disable Sell Execution Checks",
+        "description": "Disable checks for significant sell execution activity in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": [
+          "Thresh_HighSellExecCountToHistorical",
+          "Thresh_HighSellExecCountToHistoricalTimeWindow",
+          "Thresh_HighSellExecQtySumToHistorical",
+          "Thresh_HighSellExecQtySumToHistoricalTimeWindow"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableNetPositionSignificantMoveCheck",
+        "name": "Disable Future Net Position Move Checks",
+        "description": "Disable checks for significant net position move in a future evaluation time window relative to the current Evaluation Time Window",
+        "irrelevantParameters": [
+          "FutureEval_NetPositionMoveTimeWindowStart",
+          "FutureEval_NetPositionMoveTimeWindowEnd",
+          "FutureEval_NetPositionMoveTimeWindow",
+          "FutureEval_Thresh_PercentageMoveNetPosFromReference",
+          "FutureEval_NetPositionMoveEvaluationInterval"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableNewsEventCheck",
+        "name": "Disable Future News Checks",
+        "description": "Disable checks for significant market mid price move in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": null
+      },
+      {
+        "logicOverrideId": "DisableMktMidPriceSignificantMoveCheck",
+        "name": "Disable Future Market Price Move Checks",
+        "description": "Disable checks for significant market mid price move in a future evaluation time window relative to the current Evaluation Time Window",
+        "irrelevantParameters": [
+          "FutureEval_MidPriceMoveTimeWindowStart",
+          "FutureEval_MidPriceMoveTimeWindowEnd",
+          "FutureEval_MidPriceMoveTimeWindow",
+          "FutureEval_Thresh_PercentageMoveMidPriceFromReference",
+          "FutureEval_MidPriceMoveEvaluationInterval"
+        ]
+      }
+    ],
+    "aggregationBased": true,
+    "parameterPresets": null,
+    "logicOverridePresets": null
+  },
+  {
+    "alertTypeId": "6",
+    "name": "CreationOfAFloorOrCeilingInThePricePatternRfq",
+    "description": null,
+    "implementingClass": "com.cinnober.irisium.pipeline.definition.CreationOfAFloorOrCeilingInThePricePatternRfqDefinitionFactory.java",
+    "parameters": [
+      {
+        "parameterId": "timeWindow",
+        "name": "Evaluation Time Window",
+        "description": "The time window (resolution) over which alert logic is evaluated",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "1 second",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1S"
+          },
+          {
+            "displayValue": "5 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "5S"
+          },
+          {
+            "displayValue": "15 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "15S"
+          },
+          {
+            "displayValue": "30 seconds",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "30S"
+          },
+          {
+            "displayValue": "1 minute",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "60S"
+          },
+          {
+            "displayValue": "5 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "300S"
+          },
+          {
+            "displayValue": "15 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "900S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "30 minutes",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "1800S"
+          },
+          {
+            "displayValue": "1 hour",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "3600S"
+          },
+          {
+            "displayValue": "2 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "7200S"
+          },
+          {
+            "displayValue": "3 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "10800S"
+          },
+          {
+            "displayValue": "4 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "14400S"
+          },
+          {
+            "displayValue": "5 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "18000S"
+          },
+          {
+            "displayValue": "6 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "21600S"
+          },
+          {
+            "displayValue": "7 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "25200S"
+          },
+          {
+            "displayValue": "8 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "28800S"
+          },
+          {
+            "displayValue": "9 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "32400S"
+          },
+          {
+            "displayValue": "10 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "36000S"
+          },
+          {
+            "displayValue": "11 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "39600S"
+          },
+          {
+            "displayValue": "12 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "43200S"
+          },
+          {
+            "displayValue": "13 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "46800S"
+          },
+          {
+            "displayValue": "14 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "50400S"
+          },
+          {
+            "displayValue": "15 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "54000S"
+          },
+          {
+            "displayValue": "16 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "57600S"
+          },
+          {
+            "displayValue": "17 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "61200S"
+          },
+          {
+            "displayValue": "18 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "64800S"
+          },
+          {
+            "displayValue": "19 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "68400S"
+          },
+          {
+            "displayValue": "20 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "72000S"
+          },
+          {
+            "displayValue": "21 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "75600S"
+          },
+          {
+            "displayValue": "22 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "79200S"
+          },
+          {
+            "displayValue": "23 hours",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "82800S"
+          },
+          {
+            "displayValue": "1 day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "86400S"
+          },
+          {
+            "displayValue": "1.5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "129600S"
+          },
+          {
+            "displayValue": "2 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "172800S"
+          },
+          {
+            "displayValue": "3 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "259200S"
+          },
+          {
+            "displayValue": "4 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "345600S"
+          },
+          {
+            "displayValue": "5 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "432000S"
+          },
+          {
+            "displayValue": "6 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "518400S"
+          },
+          {
+            "displayValue": "7 days",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "604800S"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "evaluationInterval",
+        "name": "Evaluation Interval",
+        "description": "The interval at which the alert is evaluated. This is a time duration, for example, 1S means the alert should be evaluated every 1 second.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "HIDDEN"
+      },
+      {
+        "parameterId": "lookBackWindow",
+        "name": "General Behaviour Time Window",
+        "description": "The time window that is used to establish general historical behaviour (e.g. a day, week)",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in seconds formatted as xS where x is the number of seconds",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": [
+          {
+            "displayValue": "Time Window",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "TIME_WINDOW"
+          },
+          {
+            "displayValue": "1 Day",
+            "integerValue": null,
+            "numericValue": null,
+            "booleanValue": null,
+            "stringValue": "DAY"
+          }
+        ],
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "lookBackSampleCount",
+        "name": "Trend Sampling Count",
+        "description": "The number of data samples for calculating trends of the Evaluation and General Behaviour Time Windows. It is given a time dimension by the Trend Sampling Frequency",
+        "dataType": "INTEGER",
+        "dataTypeDescription": null,
+        "minPermittedValue": 1,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "COUNT"
+      },
+      {
+        "parameterId": "lookBackSampleStepSize",
+        "name": "Trend Sampling Frequency",
+        "description": "The sampling frequency that trend calculations use (e.g. every day, 2 days, week). This must be a multiple of days.",
+        "dataType": "STRING",
+        "dataTypeDescription": "Duration expressed in days formatted as xD where x is the number of days",
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "DURATION"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecCountToHistorical",
+        "name": "Suspicious Buy Execution Count vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the number of buy executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecCountToHistoricalTimeWindow",
+        "name": "Suspicious Buy Execution Count vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the number of buy executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecQtySumToHistorical",
+        "name": "Suspicious Buy Execution Volume vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the volume of buy executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighBuyExecQtySumToHistoricalTimeWindow",
+        "name": "Suspicious Buy Execution Volume vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the volume of buy executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecCountToHistorical",
+        "name": "Suspicious Sell Execution Count vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the number of sell executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecCountToHistoricalTimeWindow",
+        "name": "Suspicious Sell Execution Count vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the number of sell executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecQtySumToHistorical",
+        "name": "Suspicious Sell  Execution Volume vs General Behaviour Trend Threshold",
+        "description": "The level at which the ratio of the volume of sell executions within the Evaluation Time Window to its General Behaviour Time Window Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_HighSellExecQtySumToHistoricalTimeWindow",
+        "name": "Suspicious Sell  Execution Volume vs Evaluation Window Trend Threshold",
+        "description": "The level at which the ratio of the volume of sell executions within the Evaluation Time Window to its Trend becomes suspiciously large",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      },
+      {
+        "parameterId": "Thresh_LowExecPriceStdDev",
+        "name": "Low Execution Price Volatility Threshold",
+        "description": "The level below which the execution price volatility within the Evaluation Time Window is considered low",
+        "dataType": "NUMERIC",
+        "dataTypeDescription": null,
+        "minPermittedValue": null,
+        "maxPermittedValue": null,
+        "allowedValues": null,
+        "guiWidget": "RATIO"
+      }
+    ],
+    "logicOverrides": [
+      {
+        "logicOverrideId": "DisableBuyExecutionCheck",
+        "name": "Disable Buy Execution Checks",
+        "description": "Disable checks for significant buy execution activity in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": [
+          "Thresh_HighBuyExecCountToHistorical",
+          "Thresh_HighBuyExecCountToHistoricalTimeWindow",
+          "Thresh_HighBuyExecQtySumToHistorical",
+          "Thresh_HighBuyExecQtySumToHistoricalTimeWindow"
+        ]
+      },
+      {
+        "logicOverrideId": "DisableSellExecutionCheck",
+        "name": "Disable Sell Execution Checks",
+        "description": "Disable checks for significant sell execution activity in the Evaluation Time Window vs historical trends",
+        "irrelevantParameters": [
+          "Thresh_HighSellExecCountToHistorical",
+          "Thresh_HighSellExecCountToHistoricalTimeWindow",
+          "Thresh_HighSellExecQtySumToHistorical",
+          "Thresh_HighSellExecQtySumToHistoricalTimeWindow"
+        ]
+      }
+    ],
+    "aggregationBased": true,
+    "parameterPresets": null,
+    "logicOverridePresets": null
+  }
+]

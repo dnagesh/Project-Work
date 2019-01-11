@@ -1,0 +1,9 @@
+{
+  "library": "spring-mvc",
+  "dateLibrary": "java8",
+  "hideGenerationTimestamp": true,
+  "modelPackage": "com.irisium.service.alertDefinition.model",
+  "apiPackage": "com.irisium.service.alertDefinition.api",
+  "invokerPackage": "com.irisium.service.alertDefinition",
+  "delegatePattern": true
+}
